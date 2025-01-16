@@ -1,0 +1,97 @@
+#ToolgetherLogo .img {
+  width: 50%;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.btn-coral-orange,
+.btn-coral-orange:hover,
+.btn-coral-orange:active,
+.btn-coral-orange:visited {
+  background-color: #ee6c4d !important;
+}
+
+.btn-outline-coral-orange {
+  border-color: #ee6c4d;
+}
+
+.btn {
+  transition-duration: 0.4s;
+}
+
+.btn-coral-orange:hover {
+  border-color: #ee6c4d;
+  background-color: rgba(255, 255, 255, 0) !important;
+  color: #ee6c4d !important;
+}
+
+.btn-outline-coral-orange:hover {
+  background-color: #ee6c4d;
+  color: #293241;
+}
+
+.text-coral-orange {
+  color: #ee6c4d;
+}
+
+@media (max-width: 767px) {
+  .carousel-inner .carousel-item > div {
+    display: none;
+  }
+  .carousel-inner .carousel-item > div:first-child {
+    display: block;
+  }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(50%);
+  }
+
+  .carousel-inner .carousel-item-start.active,
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-50%);
+  }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start {
+  transform: translateX(0);
+}
+
+.zoom {
+  transition: transform 0.2s;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+}
+
+.calltoaction {
+  background-color: #23283d;
+  color: #fff;
+  border: 2px solid #e56a4c;
+  box-shadow: 2px 2px 5px #23283d;
+  padding: 0.5rem 1rem;
+}
+
+.calltoaction:hover {
+  background-color: #e56a4c;
+  color: #23283d;
+  border-color: #e56a4c;
+}

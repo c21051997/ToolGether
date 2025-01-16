@@ -1,0 +1,89 @@
+<style>
+  .calltoaction {
+    background-color: #23283d;
+    color: #fff;
+    border: 2px solid #e56a4c;
+    box-shadow: 2px 2px 5px #23283d;
+    padding: 0.5rem 1rem;
+  }
+
+  .calltoaction:hover {
+    background-color: #e56a4c;
+    color: #23283d;
+    border-color: #e56a4c;
+  }
+</style>
+
+<div class="container mb-5">
+  <div class="row">
+    <div class="col-6">
+      <img
+        src="static\img\constructionillustration.png"
+        alt=""
+        style="width: 80%"
+        class="ms-5"
+      />
+    </div>
+    <div class="col-6 mt-5">
+      <h1 class="text-white">Finding tools made easy</h1>
+      <p class="text-white w-75">
+        Toolgether is a community oriented tool sharing platform. List and rent
+        tools within your neighbourhood. Complete your DIY projects today!
+      </p>
+
+      <div class="mt-2">
+        <a
+          href="{% url 'Web_Login:signup' %}"
+          class="btn calltoaction mt-2 p-3 px-5 btn-floating"
+          >Register & Try Today!</a
+        >
+      </div>
+
+      <span class="border-bottom"></span>
+    </div>
+  </div>
+</div>
+
+<div class="container mb-5">
+  <div class="row">
+    <div class="col-6 mt-5">
+      <h1 class="text-white" style="text-align: end">Dont break the bank!</h1>
+      <p class="text-white" style="text-align: end">
+        Rent tools at a fraction of their real cost! Set aside more of your
+        budget to your ideas, ensuring something that you will love more!
+      </p>
+
+      <p class="text-white" style="text-align: end">
+        With our price review system, we monitor prices to maintain fairness.
+        Pay a combined rental price and start your DIY tasks as soon as
+        possible. The combined rental price contains the deposit price and the
+        rental fee. If a tool is return successfully, you receive your deposit
+        and a complete DIY project.
+      </p>
+
+      <div class="mt-2" style="text-align: end">
+        <a
+          href="{% url 'Web_Login:signup' %}"
+          class="btn calltoaction mt-2 p-3 px-5 btn-floating"
+          >Create your account and start searching!</a
+        >
+      </div>
+      <span class="border-bottom"></span>
+    </div>
+    <div class="col-6">
+      <img src="static\img\wallet.png" alt="" style="width: 70%" class="ms-5" />
+    </div>
+  </div>
+</div>
+
+<hr
+  style="
+    background-color: white;
+    border-radius: 5px;
+    height: 5px;
+    width: 75%;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 3em;
+  "
+/>

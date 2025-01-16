@@ -1,0 +1,48 @@
+{% extends "base.html" %} {% load crispy_forms_tags %} {% block title_block %}
+{% load static %} Login {% endblock %} {% block main %}
+
+<style>
+  .calltoaction {
+    background-color: #23283d;
+    color: #fff;
+    border: 2px solid #e56a4c;
+    box-shadow: 2px 2px 5px #23283d;
+    padding: 0.5rem 1rem;
+  }
+
+  .calltoaction:hover {
+    background-color: #e56a4c;
+    color: #23283d;
+    border-color: #e56a4c;
+  }
+</style>
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      <img
+        style="border-radius: 5%; object-fit: cover; height: 600px; width: 100%"
+        class="rounded"
+        src="{% static 'img/abc.png' %}"
+        alt=""
+      />
+    </div>
+    <div class="col">
+      <div class="container text-white text-start rounded">
+        <h1 class="mt-3">Login</h1>
+        <form method="POST" class="mt-3 w-75">
+          {{ form|crispy }} {% csrf_token %}
+          <button type="submit" class="btn btn-light mt-2 p-2 px-5">
+            Login
+          </button>
+        </form>
+        <br />
+        <p>
+          Need an account?
+          <a href="{% url 'Web_Login:signup' %}">Create Account</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

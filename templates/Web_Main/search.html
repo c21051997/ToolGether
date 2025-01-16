@@ -1,0 +1,66 @@
+{% extends "base.html" %} {% block main %} {% load static %}
+
+<style>
+  .calltoaction {
+    background-color: #23283d;
+    color: #fff;
+    border: 2px solid #e56a4c;
+    box-shadow: 2px 2px 5px #23283d;
+    padding: 0.5rem 1rem;
+  }
+
+  .calltoaction:hover {
+    background-color: #e56a4c;
+    color: #23283d;
+    border-color: #e56a4c;
+  }
+</style>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm"></div>
+    <div class="col-sm">
+      <h1 class="text-center text-white">Find your tool!</h1>
+      <form
+        class="nav"
+        role="search"
+        method="post"
+        action="{% url 'Web_Main:search' %}"
+      >
+        {% csrf_token %}
+        <input
+          type="search"
+          class="form-control form-control-white text-white"
+          placeholder="Search..."
+          aria-label="Search"
+        />
+      </form>
+    </div>
+    <div class="col-sm"></div>
+  </div>
+</div>
+
+<div class="container mt-4">
+  <div class="row">
+    {% for i in c %}
+    <div class="col-3 mt-4">
+      <a href="{% url 'Web_Main:item' %}"
+        ><img class="img-fluid" src="https://unsplash.it/600/600"
+      /></a>
+    </div>
+    <div class="col-3 mt-4 border border-white">
+      <h1 class="text-white">TOOL NAME</h1>
+      <p class="text-white">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nostrum
+        molestias, at fugiat facilis dicta ut quasi obcaecati nihil, dolore
+        totam delectus. Iusto accusamus obcaecati cum sequi. Maxime, expedita
+        animi!
+      </p>
+      <h4 class="text-white">Category: Tool</h4>
+      <h5 class="text-white">Price: £20.00 (Deposit: £5.00)</h5>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock main %}

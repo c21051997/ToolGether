@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% load crispy_forms_tags %}
+
+<style>
+  .calltoaction {
+    background-color: #23283d;
+    color: #fff;
+    border: 2px solid #e56a4c;
+    box-shadow: 2px 2px 5px #23283d;
+    padding: 0.5rem 1rem;
+  }
+
+  .calltoaction:hover {
+    background-color: #e56a4c;
+    color: #23283d;
+    border-color: #e56a4c;
+  }
+</style>
+
+{% block title_block %} Profile {% endblock %} {% block main %}
+<div class="container text-white">
+  <h1>Profile</h1>
+  <form method="POST">
+    {{ form|crispy }} {% csrf_token %}
+    <button type="submit" class="btn btn-warning btn-sm">Save</button>
+  </form>
+  <br />
+</div>
+{% endblock %}

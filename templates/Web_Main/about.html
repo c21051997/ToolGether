@@ -1,0 +1,75 @@
+{% extends "base.html" %} {% load crispy_forms_tags %} {% block title_block %}
+{% load static %} About Us {% endblock %} {% block main %}
+
+<style>
+  .calltoaction {
+    background-color: #23283d;
+    color: #fff;
+    border: 2px solid #e56a4c;
+    box-shadow: 2px 2px 5px #23283d;
+    padding: 0.5rem 1rem;
+  }
+
+  .calltoaction:hover {
+    background-color: #e56a4c;
+    color: #23283d;
+    border-color: #e56a4c;
+  }
+</style>
+
+<div class="container text-center">
+  <div class="row">
+    <h1 class="text-white">
+      What is
+      <img
+        id="ToolgetherLogo"
+        src="{% static 'img/toolgether-logo.png' %}"
+        style="width: 15%"
+      />?
+    </h1>
+  </div>
+</div>
+
+<div class="container text-center mt-5">
+  <div class="row">
+    <div class="col">
+      <div class="container text-white text-start">
+        <h1>The Mission</h1>
+        <p1>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. At ipsa
+          quisquam dolorum blanditiis asperiores sed error hic maxime. Quos
+          perferendis ad quam facere laboriosam vel, quia ex saepe fugit itaque.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. At ipsa
+          quisquam dolorum blanditiis asperiores sed error hic maxime. Quos
+          perferendis ad quam facere laboriosam vel, quia ex saepe fugit itaque.
+        </p1>
+
+        <h1 class="mt-3">What can you do?</h1>
+        <p1>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. At ipsa
+          quisquam dolorum blanditiis asperiores sed error hic maxime. Quos
+          perferendis ad quam facere laboriosam vel, quia ex saepe fugit itaque.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. At ipsa
+          quisquam dolorum blanditiis asperiores sed error hic maxime. Quos
+          perferendis ad quam facere laboriosam vel, quia ex saepe fugit itaque.
+        </p1>
+      </div>
+    </div>
+    <div class="col">
+      <img
+        style="
+          border-radius: 5%;
+          object-fit: cover;
+          height: 400px;
+          width: 100%;
+          transform: rotate(180deg);
+        "
+        class=""
+        src="{% static 'img/abc.png' %}"
+        alt=""
+      />
+    </div>
+  </div>
+</div>
+
+{% endblock %}
